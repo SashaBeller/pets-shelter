@@ -37,6 +37,10 @@ footer {
     display: flex;
     align-items: center;
 }
+.footer_text:hover {
+    color: #FDDCC4;
+    transition: 0.5s;
+}
 .footer_icon {
     padding-right: 20px;
 }
