@@ -1,0 +1,55 @@
+/* section footer styles start*/
+footer {
+    background: url(/shelter/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+.footer_container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_title {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+.footer_locations, .footer_contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 60px;
+}
+.footer_locations {
+    max-width: 302px;
+}
+.email {
+    padding: 45px 0;
+}
+.location_1 {
+    padding: 33px 0;
+}
+.footer_element {
+    display: flex;
+    align-items: center;
+}
+.footer_icon {
+    padding-right: 20px;
+}
+.footer_text {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    text-decoration: none;
+}
+/* section footer styles end*/

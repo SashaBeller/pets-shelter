@@ -57,7 +57,7 @@ table {
 }
 @font-face {
   font-family: "Georgia" sans-serif;
-  src: url("/fonts/georgia/georgia-regular.woff2") format("woff2");
+  src: url(/shelter/fonts/georgia/georgia-regular.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -141,7 +141,7 @@ html {
 .nav-link:focus, .nav-link:active {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
-  transition: 0.7s;
+  transition: 0.3s;
   padding-bottom: 4px;
 }
 
@@ -149,6 +149,7 @@ html {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
+  cursor: default;
 }
 
 .nav-link:hover {
@@ -212,6 +213,7 @@ html {
   color: #292929;
   opacity: 0.9;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 .make_a_friend:hover {
@@ -270,19 +272,19 @@ html {
 }
 
 /* section about styles end*/
-/* section pets styles start*/
-.pets {
+/* section our friends styles start*/
+.our-friends {
   background-color: #F6F6F6;
 }
 
-.pets_content {
+.our_friends_content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.pets_heading {
+.our_friends_heading {
   font-family: "Georgia";
   font-style: normal;
   max-height: 877px;
@@ -351,7 +353,7 @@ html {
   cursor: pointer;
   border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .arrow_back, .arrow_forward {
@@ -367,7 +369,7 @@ html {
   cursor: pointer;
   border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .arrow_back {
@@ -392,6 +394,7 @@ html {
   line-height: 130%;
   color: #292929;
   letter-spacing: 0.06em;
+  transition: 0.5s;
 }
 
 .rest_pets:hover {
@@ -399,7 +402,7 @@ html {
   cursor: pointer;
 }
 
-/* section pets styles end*/
+/* section our friends styles end*/
 /* section help styles start*/
 .help-content {
   display: flex;
@@ -435,6 +438,10 @@ html {
 }
 .help_list_card:nth-child(5), .help_list_card:last-child {
   margin-right: 0;
+}
+
+.help_list_card:hover {
+  cursor: pointer;
 }
 
 .help_name {
@@ -598,6 +605,7 @@ footer {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #F1CDB3;
+  text-decoration: none;
 }
 
 /* section footer styles end*//*# sourceMappingURL=shelter.css.map */

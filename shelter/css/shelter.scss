@@ -57,7 +57,7 @@ table {
 }
 @font-face {
   font-family: "Georgia" sans-serif;
-  src: url("/fonts/georgia/georgia-regular.woff2") format("woff2");
+  src: url(/shelter/fonts/georgia/georgia-regular.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -141,15 +141,15 @@ html {
 .nav-link:focus, .nav-link:active {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
-  transition: 0.7s;
+  transition: 0.3s;
   padding-bottom: 4px;
 }
 
 .first_link {
-    color: #FAFAFA;
-    border-bottom: 3px solid #F1CDB3;
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
   padding-bottom: 4px;
-
+  cursor: default;
 }
 
 .nav-link:hover {
@@ -213,7 +213,8 @@ html {
   letter-spacing: 0.06em;
   color: #292929;
   opacity: .9;
-  text-decoration: none;
+  text-decoration: none; 
+  transition: .5s;
 }
 
 .make_a_friend:hover {
@@ -274,19 +275,19 @@ html {
 
 /* section about styles end*/
 
-/* section pets styles start*/
-.pets {
+/* section our friends styles start*/
+.our-friends {
   background-color: #F6F6F6;
 }
 
-.pets_content {
+.our_friends_content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 
-.pets_heading {
+.our_friends_heading {
   font-family: "Georgia";
   font-style: normal;
   max-height: 877px;
@@ -354,7 +355,7 @@ html {
   cursor: pointer;
   border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .arrow_back, .arrow_forward {
@@ -370,7 +371,7 @@ html {
   cursor: pointer;
   border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .arrow_back {
@@ -395,12 +396,13 @@ html {
   line-height: 130%;
   color: #292929;
   letter-spacing: 0.06em;
+  transition: .5s;
 }
 .rest_pets:hover {
   background: #FDDCC4;
   cursor: pointer;
 }
-/* section pets styles end*/
+/* section our friends styles end*/
 
 /* section help styles start*/
 .help-content {
@@ -436,6 +438,10 @@ html {
         margin-right: 0;
     }
 } 
+
+.help_list_card:hover {
+  cursor: pointer;
+}
 
 .help_name {
     font-family: 'Georgia';
@@ -529,57 +535,4 @@ html {
 
 /* section in addition styles end*/
 
-/* section footer styles start*/
-footer {
-    background: url(/shelter/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-}
-.footer_container {
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.footer_title {
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 35px;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
-}
-.footer_locations, .footer_contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 16px;
-    margin-bottom: 60px;
-}
-.footer_locations {
-    max-width: 302px;
-}
-.email {
-    padding: 45px 0;
-}
-.location_1 {
-    padding: 33px 0;
-}
-.footer_element {
-    display: flex;
-    align-items: center;
-}
-.footer_icon {
-    padding-right: 20px;
-}
-.footer_text {
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Georgia';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    color: #F1CDB3;
-}
-/* section footer styles end*/
+@import "footer";
