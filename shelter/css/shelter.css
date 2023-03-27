@@ -50,14 +50,14 @@ table {
 
 @font-face {
   font-family: "Arial";
-  src: url(shelter/fonts/arial/arial.woff2) format("woff2");
+  src: url(/shelter/fonts/arial/arial.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Georgia" sans-serif;
-  src: url(shelter/fonts/georgia/georgia-regular.woff2) format("woff2");
+  src: url(/shelter/fonts/georgia/georgia-regular.woff2) format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -161,7 +161,7 @@ html {
 .not_only {
   padding-top: 180px;
   max-height: 908px;
-  background: url(shelter/img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url(/shelter/img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .not_only_container {
@@ -556,7 +556,7 @@ html {
 /* section in addition styles end*/
 /* section footer styles start*/
 footer {
-  background: url(shelter/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  background: url(/shelter/img/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
 }
 
 .footer_container {
