@@ -1,9 +1,3 @@
-.header2 {
-    // position: absolute;
-    // left: 0;
-    // right: 0;
-  }
-  
   .wrapper {
     max-width: 1280px;
     margin: 0 auto;
@@ -53,7 +47,7 @@
   .navbar-list-item:last-child {
     margin-right: 0;
   }
-  
+
   .nav-link {
     font-family: "Arial";
     font-style: normal;
@@ -69,11 +63,18 @@
     transition: 0.3s;
     padding-bottom: 4px;
   }
-  
+  .second_link_2 {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    text-decoration: none;
+    color: #292929;
+    cursor: default;
+  }
   .second_link {
     border-bottom: 3px solid #F1CDB3;
-    // padding-bottom: 4px;
-    cursor: default;
   }
   
   .nav-link:hover {
