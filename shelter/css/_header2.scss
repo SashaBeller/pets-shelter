@@ -84,3 +84,9 @@
 .class {
   display: block;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}

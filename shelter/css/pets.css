@@ -160,6 +160,11 @@ html {
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 /* section pets styles start*/
 .pets {
   background-color: #F6F6F6;
@@ -292,6 +297,24 @@ html {
   color: #292929;
 }
 
+@media (max-width: 1024px) {
+  .pets_heading {
+    margin-bottom: 30px;
+  }
+  .pets_content {
+    padding: 0 94px;
+  }
+  .slider_item:nth-child(even) {
+    margin-right: 0;
+  }
+  .slider_item:last-child, .slider_item:nth-last-child(2) {
+    display: none;
+  }
+  .pets_carousel_navigation {
+    margin-top: 10px;
+    margin-bottom: 76px;
+  }
+}
 /* section pets styles end*/
 /* section footer styles start*/
 footer {
@@ -305,11 +328,15 @@ footer {
   align-items: center;
 }
 
+.contacts_container {
+  display: flex;
+}
+
 .footer_title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 34px;
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #FFFFFF;
@@ -325,6 +352,8 @@ footer {
 
 .footer_locations {
   max-width: 302px;
+  margin-right: 160px;
+  margin-left: 160px;
 }
 
 .email {
@@ -362,4 +391,20 @@ footer {
   text-decoration: none;
 }
 
+@media (max-width: 1200px) {
+  .footer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .footer_locations, .footer_contacts {
+    margin-top: 0;
+  }
+  .footer_locations {
+    margin-right: 0px;
+    margin-left: 60px;
+  }
+}
 /* section footer styles end*//*# sourceMappingURL=pets.css.map */

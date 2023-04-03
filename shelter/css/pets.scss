@@ -201,6 +201,25 @@ html {
     letter-spacing: 0.06em;
     color: #292929;
   }
+
+@media (max-width: 1024px) {
+  .pets_heading {
+    margin-bottom: 30px;
+  }
+  .pets_content {
+    padding: 0 94px;
+  }
+  .slider_item:nth-child(even) {
+    margin-right: 0;
+  }
+  .slider_item:last-child, .slider_item:nth-last-child(2) {
+    display: none;
+  }
+  .pets_carousel_navigation {
+    margin-top: 10px;
+    margin-bottom: 76px;
+  }
+}
 /* section pets styles end*/
 
 @import "footer";

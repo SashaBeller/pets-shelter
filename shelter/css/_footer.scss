@@ -8,11 +8,14 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+.contacts_container {
+    display: flex;
+  }
 .footer_title {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 34px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #FFFFFF;
@@ -26,6 +29,8 @@ footer {
 }
 .footer_locations {
     max-width: 302px;
+    margin-right: 160px;
+    margin-left: 160px;
 }
 .email {
     padding: 45px 0;
@@ -55,5 +60,22 @@ footer {
     letter-spacing: 0.06em;
     color: #F1CDB3;
     text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .footer_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+    }  
+    .footer_locations, .footer_contacts {
+        margin-top: 0;
+    }
+    .footer_locations {
+        margin-right: 0px;
+        margin-left: 60px;
+    }  
 }
 /* section footer styles end*/

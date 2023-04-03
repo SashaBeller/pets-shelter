@@ -112,7 +112,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 3px;
+  padding: 30px 0;
 }
 
 .navbar-list {
@@ -155,12 +155,16 @@ html {
 .nav-link:hover {
   color: #FAFAFA;
 }
-
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
 /* header styles end*/
 /* section start screen styles start*/
 .not_only {
   padding-top: 180px;
-  max-height: 908px;
+  min-height: 908px;
   background: url(../img/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
@@ -224,31 +228,47 @@ html {
   cursor: pointer;
   background: #FDDCC4;
 }
-.start_puppy {
-  width: 43vw;
- // width: auto;
-}
 
+@media (max-width: 900px) {
+  .not_only {
+    min-height: 1165px;
+    padding-top: 150px;
+  }
+  .not_only_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .not_only_content {
+    max-width: 60vw;
+    margin-bottom: 100px;
+  }
+  .not_only_button {
+    display: flex;
+    justify-content: center;
+  }
+  .start_puppy {
+    max-width: 74vw;
+    margin-left: 141px;
+  }
+}
 /* section start screen styles end*/
 
 /* section about styles start*/
 .about_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 80px 0 100px 0;
 }
 
 .about_pets {
-  width: 25vw;
-  height: 100%;
-  margin: 6.67% 10% 8.25% 14.58%;
+  margin-right: 120px;
+    max-width: 300px;
 }
 
 .about_content {
-  width: 430px;
+  max-width: 430px;
   max-height: 380px;
-  margin-right: 180px;
-  margin-bottom: 20px;
 }
 
 .about_heading {
@@ -274,6 +294,22 @@ html {
 
 .about_subheading:last-child {
   padding-top: 25px;
+}
+
+@media (max-width: 1130px) {
+  .about_container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about_content {
+    margin-bottom: 80px;
+  }
+  .about_pets {
+    margin: 0 auto;
+    width: 39vw;
+  }
 }
 
 /* section about styles end*/
@@ -410,6 +446,28 @@ html {
   background: #FDDCC4;
   cursor: pointer;
 }
+
+@media (max-width: 1200px) {
+  .last_item {
+    display: none;
+  }
+  .slider_item:nth-child(3) {
+    margin-right: 0;
+  }
+  .first_slider_item {
+    margin-right: 40px;
+  }
+
+}
+
+@media (max-width: 940px) {
+  .arrow_back {
+    margin-right: 12px;
+  }
+  .arrow_forward {
+    margin-left: 12px;
+  }
+}
 /* section our friends styles end*/
 
 /* section help styles start*/
@@ -520,6 +578,7 @@ html {
     align-items: center;
     padding: 80px 40px 90px 40px;
 }
+
 .in_addition_dog {
     margin-right: 30px;
     margin-bottom: 10px;
@@ -588,6 +647,18 @@ html {
     max-width: 380px;
 }
 
+@media (max-width: 900px){
+  .in_addition_container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .in_addition_dog {
+    margin-right: 5px;
+    margin-top: 50px;
+    max-width: 65.7vw;
+  }
+}
 /* section in addition styles end*/
 
 @import "footer" ;
