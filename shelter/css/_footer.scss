@@ -17,7 +17,7 @@ footer {
     font-weight: 400;
     font-size: 34px;
     line-height: 130%;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
     color: #FFFFFF;
 }
 .footer_locations, .footer_contacts {
@@ -77,5 +77,40 @@ footer {
         margin-right: 0px;
         margin-left: 60px;
     }  
+}
+
+@media (max-width: 730px) {
+    .contacts_container {
+        flex-direction: column;
+        // padding-bottom: 3px;
+    }
+    .footer_contacts {
+        margin-bottom: 40px;
+    }
+    .footer_locations {
+        margin: 0 0 40px;
+       
+    }
+    .footer_title {
+        font-size: 25px;
+        text-align: center;
+    }
+    .footer_contacts_email {
+      margin: 0 25px 8px;  
+    }
+    .footer_contact_phone {
+        margin: -15px 30px 0;  
+      }
+    .footer_locations_boston {
+        margin-top: 5px;
+    }
+    .footer_locations_london {
+        margin-top: 7px;
+    }
+    .footer_puppy {
+        margin: 0 30px;
+        width: 260px;
+        height: 269px;
+    }
 }
 /* section footer styles end*/

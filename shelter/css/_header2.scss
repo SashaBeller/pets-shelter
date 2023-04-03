@@ -3,6 +3,23 @@
     margin: 0 auto;
     padding: 0 40px;
   }
+
+  @media (max-width: 1024px) {
+    .wrapper {
+      padding: 0 30px;
+    }
+  }
+  @media (max-width: 730px) {
+    .wrapper {
+      padding: 0 10px;
+    }
+  }
+
+  .body-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
   
   .logo_link {
     font-family: "Georgia";
@@ -32,9 +49,39 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 30px 0px;
   }
   
+  .header_burger-btn {
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    border: none; 
+    outline: none;
+    padding: 0;
+    background-color: inherit;
+  }
+  
+  .header_burger-btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+  }
+  
+  .header_burger-btn span:nth-child(1) {
+    transform: translateY(-11px);
+  }
+  .header_burger-btn span:nth-child(2) {
+    transform: translateY(-1px);
+  }
+  .header_burger-btn span:nth-child(3) {
+    transform: translateY(9px);
+  }
+  
+
   .navbar-list {
     display: flex;
     flex-wrap: wrap;
@@ -85,8 +132,37 @@
   display: block;
 }
 
-@media (max-width: 1024px) {
-  .wrapper {
-    padding: 0 30px;
+@media (max-width: 767px) {
+  .nav-menu {
+    padding: 30px 10px;
+  }
+  .header_burger-btn {
+    display: block;
+  }
+  
+  .navbar {
+    position: absolute;
+    right: -320px;
+    top: 0;
+    width: 320px;
+    height: 823px;
+    background-color: #292929;
+    visibility: hidden;
+  }
+  .navbar-list {
+    display: block;
+    margin: 248px 38px;
+  }
+  .nav-link {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 160%;
+  }
+  .navbar-list-item {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

@@ -29,6 +29,29 @@ body {
   line-height: 1;
 }
 
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 730px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+}
+
 ol, ul {
   list-style: none;
 }
@@ -218,6 +241,33 @@ html {
   .pets_carousel_navigation {
     margin-top: 10px;
     margin-bottom: 76px;
+  }
+}
+
+@media (max-width: 730px) {
+  .pets_heading {
+    max-width: 300px;
+    margin: 42px 0;
+    font-size: 25px;
+  }
+  .pets_content {
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  .slider_item:nth-child(n+4) {
+    display: none;
+  }
+  .carousel {
+    justify-content: center;
+  }
+  .slider_item:nth-child(-n+4) {
+    margin: 0 15px 30px;
+  }
+  .pets_carousel_navigation {
+    margin: 12px 0 42px;
+  }
+  .navigation_button {
+    margin-right: 10px;
   }
 }
 /* section pets styles end*/
