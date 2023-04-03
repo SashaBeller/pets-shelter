@@ -428,7 +428,6 @@ html {
   color: #545454;
   text-align: center;
   margin: 80px 0 60px 0;
-
 }
 .help_list {
     display: flex;
@@ -436,6 +435,7 @@ html {
     flex-wrap: wrap;
     padding-bottom: 45px;
 }
+
 .help_list_card {
     display: flex;
     flex-direction: column;
@@ -462,6 +462,51 @@ html {
 }
 .help_item {
     padding-bottom: 30px;
+}
+
+@media (max-width: 1100px) {
+  .help_list {
+      display: grid;
+      max-width: 630px;
+      gap: 55px 60px;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 auto;
+      padding-bottom: 100px;
+    }
+  .help_list_card {
+        margin: 0;
+    }
+  
+  .help_list_card:nth-child(n+6) {
+        margin-top: 0
+    }
+  }
+
+  @media(max-width: 500px) {
+     .help_heading {
+        line-height: 110%;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 130%;
+        margin: 42px 0;
+    }
+
+    .help_list {
+        display: grid;
+        max-width: 89%;
+        gap: 30px 30px;
+        grid-template-columns: 130px 130px;
+        margin: 0 auto;
+    }
+
+    .help_item {
+      padding-bottom: 20px;
+  }
+
+    .help_name {
+        font-size: 15px;
+        line-height: 110%;
+    }
 }
 /* section help styles end*/
 
@@ -545,4 +590,4 @@ html {
 
 /* section in addition styles end*/
 
-@import "footer";
+@import "footer" ;
