@@ -139,6 +139,7 @@ html {
   outline: none;
   padding: 0;
   background-color: inherit;
+  z-index: 3;
 }
 
 .header_burger-btn span {
@@ -147,6 +148,9 @@ html {
   width: 30px;
   height: 2px;
   background-color: #F1CDB3;
+  transition: opacity .4s, transform .5s;
+  will-change: transform;
+  z-index: 3;
 }
 
 .header_burger-btn span:nth-child(1) {
@@ -157,6 +161,30 @@ html {
 }
 .header_burger-btn span:nth-child(3) {
   transform: translateY(9px);
+}
+
+// burger-menu open
+.header.open {
+  .header_burger-btn span:nth-child(1) {
+  transform: translateX(-10px) rotate(90deg);
+  }
+  .header_burger-btn span:nth-child(2) {
+    transform: translateX(0) rotate(90deg);
+  }
+  .header_burger-btn span:nth-child(3) {
+    transform: translateX(10px) rotate(90deg);
+  }
+}
+
+.shadow {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(41, 41, 41, 0.6);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  visibility: hidden;
 }
 
 .navbar-list {
@@ -209,29 +237,38 @@ html {
   }
   
   .navbar {
+    height: 100vh;
+    transition: opacity .4s, transform .5s;
     position: absolute;
     right: -320px;
     top: 0;
     width: 320px;
-    height: 823px;
     background-color: #292929;
     visibility: hidden;
+    z-index: 2;
+    transition: transform .5s, visibility .5s;
+    will-change: transform;
+    text-align: center;
   }
   .navbar-list {
     display: block;
-    margin: 248px 38px;
+    margin: 248px 0;
   }
   .nav-link {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 32px;
     line-height: 160%;
   }
   .navbar-list-item {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+  .header.open .navbar {
+    transform: translateX(-100%);
+    visibility: visible;
   }
 }
 
