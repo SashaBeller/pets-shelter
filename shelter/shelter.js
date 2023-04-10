@@ -52,3 +52,99 @@ document.body.addEventListener("click", event => {
     header.classList.remove("open");
     shadow.style.visibility = "hidden";
 })
+
+
+
+// create carousel 
+const cards = document.querySelectorAll(".slider_item");
+const forwardBtn = document.querySelector(".arrow_forward");
+const backBtn = document.querySelector(".arrow_back");
+const cardsContainer = document.querySelector(".carousel");
+
+let currentIndex = 0;
+let displayedCards = [];
+
+
+let numCardsToShow;
+
+let setCardsNum = function() {
+    if (window.innerWidth >= 1200) {
+        numCardsToShow = 3;
+    } else if (window.innerWidth < 1200 && window.innerWidth >= 768) {
+        numCardsToShow = 2;
+    } else if (window.innerWidth < 768) {
+        numCardsToShow = 1;
+    }
+}
+
+setCardsNum();
+
+window.addEventListener('resize', setCardsNum);
+
+function shuffle(arr, excludedArr) {
+    const filteredArr = arr.filter(el => !excludedArr.includes(el));
+    const shuffledArr = filteredArr.slice();
+    for (let i = shuffledArr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArr[i], shuffledArr[j]] = [shuffledArr[j], shuffledArr[i]];
+    }
+    return shuffledArr.slice(0, 3);
+  }
+
+
+  let updateDisplayedCards = function () {
+    if(numCardsToShow == 2) {
+        displayedCards[0].classList.add("show");
+        displayedCards[1].classList.add("show"); 
+        displayedCards[2].classList.remove("show"); 
+    } else if (numCardsToShow == 1) {
+        displayedCards[0].classList.add("show");
+        displayedCards[2].classList.remove("show"); 
+        displayedCards[1].classList.remove("show");
+    } else if (numCardsToShow == 3) {
+        displayedCards[0].classList.add("show");
+        displayedCards[1].classList.add("show");
+        displayedCards[2].classList.add("show");
+    }
+}
+window.addEventListener('resize', updateDisplayedCards);
+
+
+  function displayCards() {
+    let newDisplay = shuffle([...cards], displayedCards);
+    displayedCards.forEach(el => el.classList.remove('show'));
+    newDisplay.forEach((el) => {
+      el.classList.add('show');
+    });
+  displayedCards = newDisplay;
+  updateDisplayedCards();
+  };
+  
+function displayNextCards() {
+    cardsContainer.classList.add("slide-right");
+    setTimeout(() => {
+      cardsContainer.classList.remove("slide-right");
+      currentIndex += numCardsToShow;
+      if (currentIndex >= cards.length) {
+        currentIndex = 0;
+      }
+      displayCards();
+    }, 300);
+  }
+  
+  function displayPreviousCards() {
+    cardsContainer.classList.add("slide-left");
+    setTimeout(() => {
+      cardsContainer.classList.remove("slide-left");
+      currentIndex -= numCardsToShow;
+      if (currentIndex < 0) {
+        currentIndex = cards.length - numCardsToShow;
+      }
+      displayCards()
+    }, 300);
+  }
+  
+forwardBtn.addEventListener("click", displayNextCards);
+backBtn.addEventListener("click", displayPreviousCards);
+
+displayCards();
